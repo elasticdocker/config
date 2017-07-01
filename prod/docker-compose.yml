@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  game-service:
+    image: manishsingla/game-service:02
+    ports:
+      - "4000:3200"
+    volumes:
+        - "/var/log/game-service:/var/log"
+    #environment:
+    #  -
+
+  word-service:
+    image: manishsingla/word-service:02
+    ports:
+      - "5000:3200"
+    volumes:
+      - "/var/log/word-service:/var/log"
